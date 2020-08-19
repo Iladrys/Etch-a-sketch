@@ -1,25 +1,50 @@
-/*#container {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-}*/
+:root {
+    background-color: #ffebcd;
+}
 body {
+    font-family: 'Courier New', Courier, monospace;
     display: flex;
-    float: center;
     justify-content: center;
+    overflow: hidden;
+    flex-flow: column;
+}
+#title {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin: 5px;
 }
 #container {
     display: grid;
     grid-template-rows: repeat(var(--grid-rows), auto);
     grid-template-columns: repeat(var(--grid-cols), auto);
-    max-width: 800px;
-    justify-content: center;
+    width: 500px;
+    height: 500px;
+    align-self: center;
     column-gap: 0;
     row-gap: 0;
+    justify-content: stretch;
+    overflow: hidden;
+    border: solid rgb(45, 10, 78) 2px;
 }
 .grid-item {
-    border: dotted black 1px;
-    min-width: 20px;
-    min-height: 20px;
     margin: 0px;
-    justify-self: stretch;
+}
+#buttons {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+    padding: 0px 10px;
+}
+#buttons button, input {
+    margin: 0 10px;
+    font-family: 'Courier New', Courier, monospace;
+    border: none;
+    font-size: 16px;
+    border-radius: 3px;
+    height: 30px;
+}
+#buttons button:hover, input:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 0px 2px rgba(255, 0, 0, 0.897);
 }
